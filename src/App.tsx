@@ -54,18 +54,19 @@ export const DrawerInlinePanelStart: React.FunctionComponent = () => {
     <DrawerPanelContent>
       <DrawerHead>
         <span tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
-          <DragDropSort
-            items={items}
-            variant="defaultWithHandle"
-            onDrop={(_, newItems) => {
-              setItems(newItems);
-            }}
-          />
+          drawer content
         </span>
         <DrawerActions>
           <DrawerCloseButton onClick={onCloseClick} />
         </DrawerActions>
       </DrawerHead>
+      <DragDropSort
+        items={items}
+        variant="defaultWithHandle"
+        onDrop={(_, newItems) => {
+          setItems(newItems);
+        }}
+      />
     </DrawerPanelContent>
   );
 
